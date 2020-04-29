@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<style>
+.custom-control{
+    top: 20px!important;
+    right: 30px!important;
+    position: absolute!important;
+    color:red;
+}
+</style>
+<body>
+        <div class="jumbotron text-center">
+                <h1>Column Count</h1>
+                <form>
+                    <div class="input-group ">
+                            <input type="number" class="form-control" placeholder="put column numbers" id="colCount" value="3">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button" >OK</button> 
+                            </div>
+                    </div>
+                </form>
+                
+        </div>
+        <div class="container-fluid">
+                <div>
+                    <table class=".table-borderless">
+                    </table>
+                </div>
+               <div>
+               <textarea style=" width : 100%;" id = 'textarea'>
+               </textarea>
+       </div>
+    </div>
+<script>
+    var imgArr = ["15285143883_5bd04995ae_o","15285259953_ddb0017f68_o","15670466340_984de60c01_o","15672054308_6c84287fb1_o","15673759298_731fda6807_o","15687334538_3a2dc6a7b9_o","15688455958_02bc38d680_o","15688513248_626b029de3_o","15688792927_9987fe9fd5_o","15689385567_9abe0a0c29_o","15907051918_83a752f83b_o","15936586550_196503fc32_o","15936723330_336e5423ef_o","15940051510_e1ce9130a0_o","15940658808_c36d806e2a_o","15943091969_2982e6fc3b_o","15945518737_7a7ea332e5_o","16066371026_8ea2031ba6_o","16093339075_b419763fda_o","16096185695_fb5fb3c9ef_o","16096866635_28398606fa_o","16103354876_7d14316c41_o","16105758486_3e8a77d0c4_o","16123198071_3f9cb5ae53_o","16124444372_bc9fd5aaf6_o","16125632951_ba168d3705_o","16126052262_1ec1e9b005_o","16126506151_1f21384c6d_o","16128189532_ebe4c79ab1_o","16129370405_d6a19f8fd2_o","Nature_HD_Wallpapers_4_001","Nature_HD_Wallpapers_4_002","Nature_HD_Wallpapers_4_003","Nature_HD_Wallpapers_4_004","Nature_HD_Wallpapers_4_005","Nature_HD_Wallpapers_4_006","Nature_HD_Wallpapers_4_007","Nature_HD_Wallpapers_4_008","Nature_HD_Wallpapers_4_009","Nature_HD_Wallpapers_4_010","Nature_HD_Wallpapers_4_011","Nature_HD_Wallpapers_4_012","Nature_HD_Wallpapers_4_013","Nature_HD_Wallpapers_4_014","Nature_HD_Wallpapers_4_015","Nature_HD_Wallpapers_4_016","Nature_HD_Wallpapers_4_017","Nature_HD_Wallpapers_4_018","Nature_HD_Wallpapers_4_019","Nature_HD_Wallpapers_4_020","Nature_HD_Wallpapers_4_021","Nature_HD_Wallpapers_4_022","Nature_HD_Wallpapers_4_023","Nature_HD_Wallpapers_4_024","Nature_HD_Wallpapers_4_025","Nature_HD_Wallpapers_4_026","Nature_HD_Wallpapers_4_027","Nature_HD_Wallpapers_4_028","Nature_HD_Wallpapers_4_029","Nature_HD_Wallpapers_4_029","Nature_HD_Wallpapers_4_030","Nature_HD_Wallpapers_4_031","Nature_HD_Wallpapers_4_032","Nature_HD_Wallpapers_4_033","Nature_HD_Wallpapers_4_034","Nature_HD_Wallpapers_4_035","Nature_HD_Wallpapers_4_036","Nature_HD_Wallpapers_4_037","Nature_HD_Wallpapers_4_038","Nature_HD_Wallpapers_4_039","Nature_HD_Wallpapers_4_040","Nature_HD_Wallpapers_4_041","Nature_HD_Wallpapers_4_042","Nature_HD_Wallpapers_4_043","Nature_HD_Wallpapers_4_044","Nature_HD_Wallpapers_4_045","Nature_HD_Wallpapers_4_046","Nature_HD_Wallpapers_4_047","Nature_HD_Wallpapers_4_048","Nature_HD_Wallpapers_4_049","Nature_HD_Wallpapers_4_050","Nature_HD_Wallpapers_4_051","Nature_HD_Wallpapers_4_052","Nature_HD_Wallpapers_4_053","Nature_HD_Wallpapers_4_054","Nature_HD_Wallpapers_4_055","Nature_HD_Wallpapers_4_056","Nature_HD_Wallpapers_4_057","Nature_HD_Wallpapers_4_058","Nature_HD_Wallpapers_4_059","Nature_HD_Wallpapers_4_060","Nature_HD_Wallpapers_4_061","Nature_HD_Wallpapers_4_062","Nature_HD_Wallpapers_4_063","Nature_HD_Wallpapers_4_064","Nature_HD_Wallpapers_4_065","Nature_HD_Wallpapers_4_066","Nature_HD_Wallpapers_4_067","Nature_HD_Wallpapers_4_068","Nature_HD_Wallpapers_4_069","Nature_HD_Wallpapers_4_070","Nature_HD_Wallpapers_4_071","Nature_HD_Wallpapers_4_072","Nature_HD_Wallpapers_4_073","Nature_HD_Wallpapers_4_074","Nature_HD_Wallpapers_4_075","Nature_HD_Wallpapers_4_076","Nature_HD_Wallpapers_4_077","Nature_HD_Wallpapers_4_078","Nature_HD_Wallpapers_4_079","Nature_HD_Wallpapers_4_080","Nature_HD_Wallpapers_4_081","Nature_HD_Wallpapers_4_082","Nature_HD_Wallpapers_4_083","Nature_HD_Wallpapers_4_084","Nature_HD_Wallpapers_4_085","Nature_HD_Wallpapers_4_086","Nature_HD_Wallpapers_4_087","Nature_HD_Wallpapers_4_088","Nature_HD_Wallpapers_4_089","Nature_HD_Wallpapers_4_090","Nature_HD_Wallpapers_4_091","Nature_HD_Wallpapers_4_092","Nature_HD_Wallpapers_4_093","Nature_HD_Wallpapers_4_094","Nature_HD_Wallpapers_4_095","Nature_HD_Wallpapers_4_096","Nature_HD_Wallpapers_4_097","Nature_HD_Wallpapers_4_098","Nature_HD_Wallpapers_4_099","Nature_HD_Wallpapers_4_100","Nature_HD_Wallpapers_4_101","Nature_HD_Wallpapers_4_102","Nature_HD_Wallpapers_4_103","Nature_HD_Wallpapers_4_104","Nature_HD_Wallpapers_4_105","Nature_HD_Wallpapers_4_106","Nature_HD_Wallpapers_4_107","Nature_HD_Wallpapers_4_108","Nature_HD_Wallpapers_4_109","Nature_HD_Wallpapers_4_110","Nature_HD_Wallpapers_4_111","Nature_HD_Wallpapers_4_112","Nature_HD_Wallpapers_4_113","Nature_HD_Wallpapers_4_114","Nature_HD_Wallpapers_4_115","Nature_HD_Wallpapers_4_116","Nature_HD_Wallpapers_4_117","Nature_HD_Wallpapers_4_118","Nature_HD_Wallpapers_4_119","Nature_HD_Wallpapers_4_120","Nature_HD_Wallpapers_4_121","Nature_HD_Wallpapers_4_122","Nature_HD_Wallpapers_4_123","Nature_HD_Wallpapers_4_124","Nature_HD_Wallpapers_4_125","Nature_HD_Wallpapers_4_126","Nature_HD_Wallpapers_4_127","Nature_HD_Wallpapers_4_128","Nature_HD_Wallpapers_4_129","Nature_HD_Wallpapers_4_130","Nature_HD_Wallpapers_4_131","Nature_HD_Wallpapers_4_132","Nature_HD_Wallpapers_4_133","Nature_HD_Wallpapers_4_134","Nature_HD_Wallpapers_4_135","Nature_HD_Wallpapers_4_136","Nature_HD_Wallpapers_4_137"];
+        var i = 0, j,col = 3;
+//    var txt = '<td><div class="card img-fluid"  onClick="imgSelFunc(xxx)"> <img class="card-img-top" src="xxx.jpg" alt="Card image" style="width:100%"><form class="card-img-overlay"><input type="checkbox" id="xxx" ></form></div></td>';
+    var txt = '<td><div class="card img-fluid"  onClick="imgSelFunc(xxx)"> <img class="card-img-top" src="img/xxx.jpg" alt="Card image" style="width:600px;height:auto"><form class="card-img-overlay"><div class="custom-control custom-checkbox"><input type="checkbox" class="custom-control-input" id="xxx" name="example1"><label class="custom-control-label" for="customCheck"></label></div></form></div></td>';
+    $(document).ready(function(){
+       $('textarea').val('');
+//        for(i = 0;i < 10; i++)
+        $('button').click(function(){
+            col = document.getElementById('colCount').value;
+            i = 0; 
+            draw();
+        });
+        draw();
+        function draw(){
+            $('table').html('');
+            for (;imgArr[i];) {
+                $('table').append('<tr></tr>');
+                for(j = 0;j < col; j++){
+                    temp = txt.replace('(xxx)',"('"+imgArr[i]+"')");
+                    temp = temp.replace(/xxx/g,imgArr[i]);
+                    $("tr:last-child").append(temp);
+                    i++;
+                    var n = (window.innerWidth - 50) / col;
+                    $('img').css('width', n);
+                    $('img').css('height', n/4*3);
+                    if(imgArr[i] == null)  break;
+                }
+            }}
+        });   
+        function imgSelFunc(tempId){
+            document.getElementById(tempId).checked  = !document.getElementById(tempId).checked;
+            var temp = document.getElementById('textarea').value;
+            if(document.getElementById(tempId).checked)
+            {
+              if(temp == '')
+              document.getElementById('textarea').value= tempId;
+              else
+               document.getElementById('textarea').value= temp + ',' + tempId;
+            }
+            else{
+                if(temp.indexOf(tempId+',') == 0)
+                document.getElementById('textarea').value = temp.replace(tempId+',','');
+                else if(temp == tempId)
+                document.getElementById('textarea').value = temp.replace(tempId,'');
+                else
+                    document.getElementById('textarea').value = temp.replace(','+tempId,'');
+            }
+          //  alert(document.getElementById(tempId).checked);
+        }
+      
+</script>
+</body>
